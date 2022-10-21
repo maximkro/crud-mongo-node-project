@@ -8,7 +8,8 @@ const DB_URL = "mongodb+srv://jest347:Deluvion1993@cluster0.llqg8kh.mongodb.net/
 const app = express();
 
 app.use(express.json()); // on order to read json files such as body req
-app.use(fileUpload({}))
+app.use(fileUpload({}));
+app.use(express.static('static'));
 app.use('/api', router);
 
 async function startApp() {
