@@ -1,13 +1,10 @@
-import { json } from "express";
-import Post from "../models/Post.js";
 import PostService from "../service/PostService.js";
-
 class PostController {
     async create(req, res) {
         try {
-            console.log(req.files);
-            const post = await PostService.create(req.body);
-            res.status(201).json(post);
+            //console.log(req.files);
+            const post = await PostService.create(req.body, req.files.picture);
+            res.status(200).json(post)
         } catch (e) {
             res.status(500).json(e);
         }

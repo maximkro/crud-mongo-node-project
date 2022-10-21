@@ -1,8 +1,7 @@
 import Post from "../models/Post.js";
-
 class PostService {
     async create(post, picture) {
-        const createdPost = await Post.craete(post);
+        const createdPost = await Post.create(post);
         return createdPost;
     }
 
