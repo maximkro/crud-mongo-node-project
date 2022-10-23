@@ -4,7 +4,7 @@ import router from './api/routes/posts.router.js';
 import fileUpload from 'express-fileupload';
 const PORT = 5000;
 
-const DB_URL = "mongodb+srv://jest347:Deluvion1993@cluster0.llqg8kh.mongodb.net/?retryWrites=true&w=majority";
+const DB_URL = "mongodb+srv://jest347:Deluvion1993@cluster0.llqg8kh.mongodb.net/crud-nodejs?retryWrites=true&w=majority";
 const app = express();
 
 app.use(express.json()); // on order to read json files such as body req
